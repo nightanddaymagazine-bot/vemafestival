@@ -18,11 +18,19 @@
         }
         
         .hero {
-            background: linear-gradient(135deg, #8B0000 0%, #C9A84C 100%);
+            background: linear-gradient(rgba(139, 0, 0, 0.7), rgba(201, 168, 76, 0.7)), 
+                        url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=1600') center/cover;
             color: #FFF8F0;
             text-align: center;
-            padding: 100px 20px;
+            padding: 60px 20px 100px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .logo {
+            max-width: 300px;
+            height: auto;
+            margin: 0 auto 30px;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
         }
         
         .hero h1 {
@@ -155,21 +163,20 @@
 </head>
 <body>
     <div class="hero">
+        <svg class="logo" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+            <text x="100" y="50" font-family="Georgia" font-size="60" font-weight="bold" fill="#FFF8F0" text-anchor="middle" dominant-baseline="middle">VeMA</text>
+        </svg>
         <h1>VeMA</h1>
         <div class="tagline">Venezia Musica d'Autore</div>
         <div class="tagline">Dove la Musica incontra Venezia</div>
         <div class="date">10 · 11 · 12 · 17 · 18 Luglio 2026<br>Forte Bazzera, Venezia</div>
     </div>
-    
-    <section class="location">
+
+    <section>
         <h2>La Location</h2>
-        <p style="text-align: center; font-size: 1.1em; max-width: 800px; margin: 0 auto;">
-            <strong>Forte Bazzera</strong> è un'oasi verde unica affacciata sulla Laguna di Venezia, 
-            a pochi minuti dall'Aeroporto Internazionale Marco Polo. Una location storica e suggestiva 
-            che ospiterà cinque giorni di musica, arte e cultura veneziana.
-        </p>
+        <p><strong>Forte Bazzera</strong> è un'oasi verde unica affacciata sulla Laguna di Venezia, a pochi minuti dall'Aeroporto Internazionale Marco Polo. Una location storica e suggestiva che ospiterà cinque giorni di musica, arte e cultura veneziana.</p>
     </section>
-    
+
     <section>
         <h2>Gli Artisti</h2>
         
@@ -180,7 +187,6 @@
                 <p><strong>Tribute to Emerson Lake & Palmer</strong></p>
                 <p>Un omaggio alla leggendaria band progressive rock con l'esecuzione integrale dell'album Tarkus.</p>
             </div>
-            
             <div class="artist-card">
                 <h3>LUCA MINNELLI & FRIENDS</h3>
                 <p><strong>Tenore Internazionale</strong></p>
@@ -188,7 +194,7 @@
                 <p>Voce lirica di prestigio internazionale che porterà l'eccellenza del belcanto italiano al VeMA Festival.</p>
             </div>
         </div>
-        
+
         <div class="day-header">SABATO 11 LUGLIO</div>
         <div class="artists">
             <div class="artist-card">
@@ -196,22 +202,18 @@
                 <p><strong>plays Jethro Tull</strong></p>
                 <p>Un quartetto d'archi che reinterpreta i capolavori dei Jethro Tull in chiave classica.</p>
             </div>
-            
             <div class="artist-card">
                 <h3>LE ORME</h3>
                 <p><strong>Venezia, 61 anni di attività</strong></p>
-                <p>Presentazione esclusiva dello show <em>'LE ORME PLAYS VENICE'</em> - 
-                un viaggio musicale da Vivaldi ai Pink Floyd, con orchestra classica e ospiti speciali 
-                tra cui il compositore Francesco Sartori.</p>
+                <p>Presentazione esclusiva dello show <em>'LE ORME PLAYS VENICE'</em> - un viaggio musicale da Vivaldi ai Pink Floyd, con orchestra classica e ospiti speciali tra cui il compositore Francesco Sartori.</p>
             </div>
-            
             <div class="artist-card">
                 <h3>BERNARDO LANZETTI</h3>
                 <p><strong>Icona del Progressive Rock Italiano</strong></p>
                 <p>Voce storica dei Premiata Forneria Marconi e degli Acqua Fragile.</p>
             </div>
         </div>
-        
+
         <div class="day-header">DOMENICA 12 LUGLIO</div>
         <div class="artists">
             <div class="artist-card">
@@ -219,13 +221,11 @@
                 <p><strong>Tribute Band</strong></p>
                 <p>Il miglior tributo italiano alla leggendaria band Toto.</p>
             </div>
-            
             <div class="artist-card">
                 <h3>MASSIMO BUBOLA</h3>
                 <p><strong>Cantautore e Compositore</strong></p>
                 <p>Autore per Fabrizio De André, Fiorella Mannoia e molti altri grandi della musica italiana.</p>
             </div>
-            
             <div class="artist-card">
                 <h3>OF NEW TROLLS</h3>
                 <p><strong>Genova, 60° anniversario</strong></p>
@@ -233,7 +233,7 @@
                 <p>Sette partecipazioni al Festival di Sanremo. Hanno accompagnato Fabrizio De André nel suo primo tour con il compositore premio Oscar Luis Bacalov.</p>
             </div>
         </div>
-        
+
         <div class="day-header">VENERDÌ 17 LUGLIO</div>
         <div class="artists">
             <div class="artist-card">
@@ -242,7 +242,7 @@
                 <p>Una delle band più longeve e amate della musica italiana, con oltre 60 anni di carriera.</p>
             </div>
         </div>
-        
+
         <div class="day-header">SABATO 18 LUGLIO - GRAN GALÀ FINALE</div>
         <div class="artists">
             <div class="artist-card">
@@ -252,12 +252,12 @@
                 <p>Una notte speciale dedicata alla musica elettronica e al talento veneto, celebrando il meglio della scena DJ regionale.</p>
             </div>
         </div>
-        
-        <p style="text-align: center; margin-top: 50px; font-style: italic; color: #666;">
-            In collaborazione con il <strong>Conservatorio Benedetto Marcello di Venezia</strong>
+
+        <p style="text-align: center; margin-top: 50px; font-style: italic; color: #8B0000;">
+            <strong>In collaborazione con il Conservatorio Benedetto Marcello di Venezia</strong>
         </p>
     </section>
-    
+
     <section>
         <h2>Partner & Collaborazioni</h2>
         <p style="text-align: center; font-size: 1.2em; margin-top: 30px;">
@@ -265,7 +265,7 @@
             Partner culturale ufficiale
         </p>
     </section>
-    
+
     <section class="contacts">
         <h2>Contatti</h2>
         <div class="contact-grid">
@@ -275,21 +275,17 @@
                 <p><a href="mailto:cd@backstage.global">cd@backstage.global</a></p>
                 <p><a href="tel:+34628298690">+34 628 298 690</a></p>
             </div>
-            
             <div class="contact-card">
                 <h3>Enrico</h3>
                 <p><strong>Organization</strong></p>
-                <p>Info: <a href="mailto:cd@backstage.global">cd@backstage.global</a></p>
+                <p>Info: <a href="mailto:info@vemafestival.com">info@vemafestival.com</a></p>
+                <p><a href="https://www.vemafestival.com">www.vemafestival.com</a></p>
             </div>
         </div>
-        
-        <p style="text-align: center; margin-top: 40px; font-size: 1.1em;">
-            <a href="http://www.backstage.global" style="color: #C9A84C;">www.backstage.global</a>
-        </p>
     </section>
-    
+
     <footer>
-        &copy; 2026 VeMA Festival - Venezia Musica d'Autore. All rights reserved.
+        <p>© 2026 VeMA Festival - Venezia Musica d'Autore. All rights reserved.</p>
     </footer>
 </body>
 </html>
