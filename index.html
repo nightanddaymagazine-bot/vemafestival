@@ -24,26 +24,20 @@
                 url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=1600') center/cover;
             color: #FFF8F0;
             text-align: center;
-            padding: 160px 20px 100px;
+            padding: 100px 20px 80px;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .logo-container {
-            position: absolute;
-            top: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            z-index: 10;
-        }
-
-        .logo {
+        .logo-vema {
             max-width: 320px;
             height: auto;
+            margin-bottom: 20px;
         }
 
         .claim-header {
-            margin-top: 20px;
             text-align: center;
             color: #FFF8F0;
         }
@@ -63,7 +57,7 @@
 
         .hero .date {
             font-size: 1.2em;
-            margin-top: 40px;
+            margin-top: 30px;
             background: rgba(139, 0, 0, 0.9);
             display: inline-block;
             padding: 15px 40px;
@@ -92,11 +86,10 @@
             font-weight: 800;
             text-decoration: none;
             letter-spacing: 1px;
-            font-family: 'Inter', sans-serif;
         }
 
-        .backstage-banner img {
-            max-width: 350px;
+        .backstage-logo {
+            max-width: 300px;
             height: auto;
         }
 
@@ -147,10 +140,8 @@
         }
 
         .artists-section {
-            background: #8B0000;
-            color: white;
-            padding: 100px 20px;
-            max-width: 100%;
+            background: #fdfdfd; /* Cambiato da rosso a chiaro per soluzione 006 */
+            padding: 80px 20px;
         }
 
         .artists-container {
@@ -159,7 +150,7 @@
         }
 
         h2.artists-title {
-            color: white !important;
+            color: #8B0000 !important;
             text-align: center;
             font-size: 2.8em;
             margin-bottom: 20px;
@@ -170,45 +161,42 @@
             margin-right: auto;
         }
 
+        .day-header {
+            color: #8B0000;
+            padding: 20px;
+            margin: 40px 0 20px 0;
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: 800;
+            border-bottom: 1px solid #ddd;
+        }
+
         .artists-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
-            margin-top: 50px;
+            gap: 30px;
         }
 
         .artist-card {
             background: white;
-            padding: 35px;
+            padding: 30px;
             border-radius: 12px;
-            border-top: 6px solid #8B0000;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            color: #000;
+            border: 1px solid #eee;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
         }
 
         .artist-card h3 {
             color: #8B0000;
             font-size: 1.8em;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             font-weight: 800;
         }
 
         .artist-card strong {
-            color: #000;
+            color: #333;
             display: block;
             margin-bottom: 10px;
-        }
-
-        .day-header {
-            background: rgba(255,255,255,0.1);
-            color: #FFF8F0;
-            padding: 20px;
-            margin: 50px 0 25px 0;
-            border-radius: 8px;
-            text-align: center;
-            font-size: 1.5em;
-            font-weight: bold;
-            border: 1px solid rgba(255,255,255,0.2);
         }
 
         .partners-section {
@@ -232,7 +220,7 @@
         }
 
         .partner-item img {
-            max-width: 280px;
+            max-width: 250px;
             height: auto;
             margin-bottom: 15px;
         }
@@ -255,14 +243,24 @@
             max-width: 200px;
             margin-bottom: 20px;
         }
+
+        @media (max-width: 768px) {
+            .backstage-banner .buy-tickets {
+                font-size: 1.5em;
+            }
+            .claim-header h1 {
+                font-size: 2em;
+            }
+            .day-header {
+                font-size: 1.4em;
+            }
+        }
     </style>
 </head>
 <body>
 
     <header class="hero">
-        <div class="logo-container">
-            <img src="https://www.nightanddaymag.com/media/general-news/626/medium/vema_logo_transparent.png" alt="VeMA Logo" class="logo">
-        </div>
+        <img src="https://www.nightanddaymag.com/media/general-news/626/thumbnail/vema_logo_transparent.png" alt="VeMA Logo" class="logo-vema">
         
         <div class="claim-header">
             <h1>Venezia Musica d'Autore</h1>
@@ -279,7 +277,7 @@
         <div class="backstage-content">
             <a href="https://backstage.global/collection/ad9c23c3-d986-4342-8280-4f7357bc84b0" class="buy-tickets">Acquista i tuoi biglietti su Backstage.Global</a>
             <a href="https://backstage.global/collection/ad9c23c3-d986-4342-8280-4f7357bc84b0">
-                <img src="https://www.nightanddaymag.com/media/general-news/626/medium/Backstage_Global_Logo_2024_Horizontal_white.png" alt="Backstage">
+                <img src="https://newbksbackstage.s3.eu-north-1.amazonaws.com/img/header/backstage_logo.svg" alt="Backstage" class="backstage-logo">
             </a>
         </div>
     </div>
@@ -290,8 +288,8 @@
             <p><strong>Forte Bazzera</strong> è un'oasi verde unica affacciata sulla Laguna di Venezia, a pochi minuti dall'Aeroporto Internazionale Marco Polo. Una location storica e suggestiva che ospiterà cinque giorni di musica, arte e cultura veneziana.</p>
             
             <div class="location-photos">
-                <img src="https://www.nightanddaymag.com/media/general-news/626/medium/forte_bazzera_polveriera_optimized.jpg" alt="Forte Bazzera Polveriera">
-                <img src="https://www.nightanddaymag.com/media/general-news/626/medium/forte_bazzera_aerea_optimized.jpg" alt="Forte Bazzera Aerea">
+                <img src="https://www.nightanddaymag.com/media/general-news/626/thumbnail/forte_bazzera_polveriera_optimized.jpg" alt="Forte Bazzera Polveriera">
+                <img src="https://www.nightanddaymag.com/media/general-news/626/thumbnail/forte_bazzera_aerea_optimized.jpg" alt="Forte Bazzera Aerea">
             </div>
         </div>
     </section>
@@ -374,7 +372,7 @@
                 </div>
             </div>
 
-            <p style="text-align: center; margin-top: 40px; font-weight: 600;">In collaborazione con il Conservatorio Benedetto Marcello di Venezia<br>Partner culturale ufficiale</p>
+            <p style="text-align: center; margin-top: 40px; font-weight: 600; color: #8B0000;">In collaborazione con il Conservatorio Benedetto Marcello di Venezia<br>Partner culturale ufficiale</p>
         </div>
     </section>
 
@@ -383,11 +381,11 @@
         <div class="partners-grid">
             <div class="partner-item">
                 <h4 style="color: #8B0000; margin-bottom: 10px;">Media Partner</h4>
-                <a href="https://www.nightanddaymag.com/"><img src="https://www.nightanddaymag.com/img/logo_nd.png" alt="ND Magazine"></a>
+                <a href="https://www.nightanddaymag.com/"><img src="https://www.nightanddaymag.com/media/general-news/626/thumbnail/LOGO-BLACK-ND-2024-omar.png" alt="ND Magazine"></a>
             </div>
             <div class="partner-item">
                 <h4 style="color: #8B0000; margin-bottom: 10px;">Partner</h4>
-                <a href="https://www.comune.venezia.it/it/content/chi-siamo-citta-in-festa"><img src="https://www.nightanddaymag.com/media/general-news/626/medium/pngkey-com-festa-png-3812243.png" alt="Venezia Città in Festa"></a>
+                <a href="https://www.comune.venezia.it/it/content/chi-siamo-citta-in-festa"><img src="https://www.nightanddaymag.com/media/general-news/626/Venezia_le_Citta_in_Festa_quadrato.png" alt="Venezia Città in Festa"></a>
             </div>
         </div>
     </section>
@@ -413,7 +411,7 @@
     </section>
 
     <footer>
-        <img src="https://www.nightanddaymag.com/media/general-news/626/medium/vema_logo_transparent.png" alt="VeMA Logo" class="footer-logo">
+        <img src="https://www.nightanddaymag.com/media/general-news/626/thumbnail/vema_logo_transparent.png" alt="VeMA Logo" class="footer-logo">
         <p>&copy; 2026 VeMA Festival - Venezia Musica d'Autore. All rights reserved.</p>
     </footer>
 
